@@ -151,7 +151,7 @@ streamlit run app.py
 
 ## 💰 Token Cost & Latency Analysis
 
-* **Model Choice:** `llama-3.3-70b-versatile` via Groq Cloud.
+* **Model Choice:** `openai/gpt-oss-120b` via Groq Cloud.
 * **Average Latency:** ~1.2 seconds per message (including multi-turn tool calling).
 * **Estimated Cost:** ~**$0.00015 per message**, making a full 40-message batch run cost **less than $0.01 ($0.006)**.
 
