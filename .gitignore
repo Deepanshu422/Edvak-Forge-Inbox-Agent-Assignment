@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+.venv/
+env/
+ENV/
+
+# Environment Variables & Secrets (CRITICAL: NEVER COMMIT)
+.env
+*.env
+!.env.example
+
+# Pytest / Test Artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Python packaging & distribution
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS Generated
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

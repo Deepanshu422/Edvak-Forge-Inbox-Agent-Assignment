@@ -1,0 +1,729 @@
+[
+  {
+    "id": "M001",
+    "patient_id": "P002",
+    "intents": [
+      "refill"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "prepare_refill_for_approval"
+    ],
+    "routed_to": [
+      "provider_refills"
+    ],
+    "tool_calls": [
+      "tool_check_refill",
+      "tool_verify_patient"
+    ],
+    "reply_draft": "Hi Robert, I've submitted a request to refill your lisinopril. You should receive a confirmation soon. Let us know if you need anything else."
+  },
+  {
+    "id": "M002",
+    "patient_id": "P007",
+    "intents": [
+      "reschedule"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "reschedule_appointment"
+    ],
+    "routed_to": [],
+    "tool_calls": [
+      "tool_find_slots",
+      "tool_reschedule_appointment",
+      "tool_verify_patient",
+      "tool_get_patient_appointments"
+    ],
+    "reply_draft": "Your appointment on Wednesday, November 11 at 10:00 AM has been moved to Friday, November 13 at 1:00 PM with Sarah Kim, NP. Please let us know if you need any further assistance."
+  },
+  {
+    "id": "M003",
+    "patient_id": "P003",
+    "intents": [
+      "clinical"
+    ],
+    "urgency": "emergency",
+    "actions": [
+      "escalate_emergency"
+    ],
+    "routed_to": [
+      "clinician_urgent"
+    ],
+    "tool_calls": [
+      "tool_verify_patient"
+    ],
+    "reply_draft": "This sounds like a medical emergency. Please call 911 or go to the nearest emergency department immediately. We have alerted our clinical team."
+  },
+  {
+    "id": "M004",
+    "patient_id": "P004",
+    "intents": [
+      "refill"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "offer_appointment",
+      "refill_needs_visit"
+    ],
+    "routed_to": [],
+    "tool_calls": [
+      "tool_find_slots",
+      "tool_check_refill",
+      "tool_verify_patient"
+    ],
+    "reply_draft": "Hello Thomas,\n\nThank you for your request. Because you haven’t been seen in the clinic for more than 12 months, we need to schedule a visit before we can process a refill of your metformin. The earliest available appointment is today, November 9, at 09:00 AM with Dr. Maya Patel (Family Medicine). Please let us know if this time works for you, or if you’d prefer another date or provider, and we’ll secure the slot for you.\n\nWe look forward to seeing you soon.\n\nBest regards,\nMaplewood Family Clinic Front Desk"
+  },
+  {
+    "id": "M005",
+    "patient_id": "P006",
+    "intents": [
+      "refill"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "route_to_provider"
+    ],
+    "routed_to": [
+      "provider_refills"
+    ],
+    "tool_calls": [
+      "tool_check_refill",
+      "tool_verify_patient"
+    ],
+    "reply_draft": "Hi Marcus, Xanax is a controlled medication and we cannot process a refill automatically. Please call the clinic at 555‑0100 to speak with Dr. Okafor or schedule an appointment to discuss a prescription."
+  },
+  {
+    "id": "M006",
+    "patient_id": "P005",
+    "intents": [
+      "clinical",
+      "refill"
+    ],
+    "urgency": "emergency",
+    "actions": [
+      "escalate_emergency"
+    ],
+    "routed_to": [
+      "clinician_urgent"
+    ],
+    "tool_calls": [
+      "tool_check_refill",
+      "tool_verify_patient"
+    ],
+    "reply_draft": "This sounds like a medical emergency. Please call 911 or go to the nearest emergency department immediately. We have alerted our clinical team."
+  },
+  {
+    "id": "M007",
+    "patient_id": null,
+    "intents": [
+      "new_patient",
+      "schedule"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "answer_directly",
+      "offer_appointment"
+    ],
+    "routed_to": [
+      "front_desk"
+    ],
+    "tool_calls": [
+      "tool_verify_patient"
+    ],
+    "reply_draft": "Thank you for your interest in Maplewood Family Clinic! Yes, we do accept new patients. We can schedule a new-patient physical for you. Here are some upcoming slots with Dr. Maya Patel:\n- November 10, 2026 at 9:30 AM\n- November 11, 2026 at 10:00 AM\n- November 12, 2026 at 2:00 PM\n- November 14, 2026 at 9:00 AM\nPlease let us know which time works best for you, or if you’d prefer a different provider, and we’ll confirm your appointment."
+  },
+  {
+    "id": "M008",
+    "patient_id": "P010",
+    "intents": [
+      "billing"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "route_to_billing"
+    ],
+    "routed_to": [
+      "billing"
+    ],
+    "tool_calls": [
+      "tool_verify_patient"
+    ],
+    "reply_draft": "Thank you for reaching out, Daniel. I’ve forwarded your question about the $240 bill to our billing team. They will review your insurance coverage and get back to you shortly. If you have any additional details or documents, please let us know."
+  },
+  {
+    "id": "M009",
+    "patient_id": "P012",
+    "intents": [
+      "refill"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "prepare_refill_for_approval"
+    ],
+    "routed_to": [],
+    "tool_calls": [
+      "tool_check_refill",
+      "tool_verify_patient"
+    ],
+    "reply_draft": "Your refill request for levothyroxine has been received and will be processed. You will be notified once it is ready."
+  },
+  {
+    "id": "M010",
+    "patient_id": "P013",
+    "intents": [
+      "schedule"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "book_appointment"
+    ],
+    "routed_to": [],
+    "tool_calls": [
+      "tool_find_slots",
+      "tool_verify_patient",
+      "tool_book_appointment"
+    ],
+    "reply_draft": "Your follow‑up appointment with Dr. Maya Patel has been scheduled for Tuesday, November 10 at 9:00 AM. If you need to change the time or date, just let us know."
+  },
+  {
+    "id": "M011",
+    "patient_id": null,
+    "intents": [
+      "records"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "request_verification"
+    ],
+    "routed_to": [],
+    "tool_calls": [
+      "tool_verify_patient"
+    ],
+    "reply_draft": "For your privacy, we cannot disclose health information or appointment details. Please verify your identity by calling the clinic or using the patient portal."
+  },
+  {
+    "id": "M012",
+    "patient_id": "P014",
+    "intents": [
+      "refill"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "route_to_provider"
+    ],
+    "routed_to": [
+      "provider_refills"
+    ],
+    "tool_calls": [
+      "tool_check_refill",
+      "tool_verify_patient",
+      "tool_route_to_queue"
+    ],
+    "reply_draft": "Hi Kevin, we’ve received your request for a zolpidem refill. Because this medication is a controlled substance, we need to have your provider review it. We’ve forwarded your request to Dr. Okafor’s office and they will contact you soon. If you have any urgent concerns, please call the clinic at 555‑0114."
+  },
+  {
+    "id": "M013",
+    "patient_id": "P015",
+    "intents": [
+      "refill"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "refill_too_early"
+    ],
+    "routed_to": [],
+    "tool_calls": [
+      "tool_check_refill",
+      "tool_verify_patient"
+    ],
+    "reply_draft": "Hi Fatima, thank you for your request. Our records show that your omeprazole refill is not yet eligible. The earliest we can process a refill is on 2026-11-17. If you need the medication before then, you may want to schedule a brief appointment or discuss alternative options with your provider. Please let us know how you’d like to proceed."
+  },
+  {
+    "id": "M014",
+    "patient_id": "P017",
+    "intents": [
+      "clinical"
+    ],
+    "urgency": "emergency",
+    "actions": [
+      "escalate_emergency"
+    ],
+    "routed_to": [
+      "clinician_urgent"
+    ],
+    "tool_calls": [
+      "tool_verify_patient"
+    ],
+    "reply_draft": "This sounds like a medical emergency. Please call 911 or go to the nearest emergency department immediately. We have alerted our clinical team."
+  },
+  {
+    "id": "M015",
+    "patient_id": "P009",
+    "intents": [
+      "clinical",
+      "schedule"
+    ],
+    "urgency": "urgent",
+    "actions": [
+      "answer_directly"
+    ],
+    "routed_to": [],
+    "tool_calls": [
+      "tool_find_slots",
+      "tool_verify_patient",
+      "tool_book_appointment"
+    ],
+    "reply_draft": "Hi Anna, we’ve scheduled Sofia for a sick‑visit with Sarah Kim today at 9:00 am. Please bring her to the clinic at that time. If her fever worsens or she develops breathing difficulty, please seek emergency care (call 911). If you need to change the appointment, just let us know."
+  },
+  {
+    "id": "M016",
+    "patient_id": "P018",
+    "intents": [
+      "schedule"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "book_appointment"
+    ],
+    "routed_to": [],
+    "tool_calls": [
+      "tool_find_slots",
+      "tool_verify_patient",
+      "tool_book_appointment"
+    ],
+    "reply_draft": "Hola Carlos, su cita para el chequeo anual está programada para el viernes 11 de noviembre a las 09:00 con la Dra. Maya Patel. Si necesita cambiarla, avísenos. ¡Gracias!"
+  },
+  {
+    "id": "M017",
+    "patient_id": "P020",
+    "intents": [
+      "clinical",
+      "refill"
+    ],
+    "urgency": "emergency",
+    "actions": [
+      "escalate_emergency"
+    ],
+    "routed_to": [
+      "clinician_urgent"
+    ],
+    "tool_calls": [
+      "tool_check_refill",
+      "tool_verify_patient"
+    ],
+    "reply_draft": "This sounds like a medical emergency. Please call 911 or go to the nearest emergency department immediately. We have alerted our clinical team."
+  },
+  {
+    "id": "M018",
+    "patient_id": "P022",
+    "intents": [
+      "refill"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "flag_suspicious_instruction",
+      "route_to_provider"
+    ],
+    "routed_to": [
+      "provider_refills"
+    ],
+    "tool_calls": [
+      "tool_verify_patient"
+    ],
+    "reply_draft": "Hi Ahmed, I’m happy to help with your refill request. To process it safely, could you please provide the names of the medications you’d like refilled? For any controlled substances, we’ll need approval from Dr. Okafor before the refill can be completed. Thank you."
+  },
+  {
+    "id": "M019",
+    "patient_id": "P021",
+    "intents": [
+      "clinical",
+      "refill"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "route_to_provider"
+    ],
+    "routed_to": [
+      "provider_refills"
+    ],
+    "tool_calls": [
+      "tool_check_refill",
+      "tool_verify_patient"
+    ],
+    "reply_draft": "We have received your request for an oxycodone refill. Because this medication is a controlled substance, we need to have your provider review it. We will forward your request to Dr. Patel, and they will contact you soon. If your pain becomes severe or you experience any concerning symptoms, please call 911 or go to the nearest emergency department."
+  },
+  {
+    "id": "M020",
+    "patient_id": "P001",
+    "intents": [
+      "refill"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "prepare_refill_for_approval"
+    ],
+    "routed_to": [
+      "provider_refills"
+    ],
+    "tool_calls": [
+      "tool_check_refill",
+      "tool_verify_patient"
+    ],
+    "reply_draft": "Entiendo que necesita más metformina. He enviado su solicitud de recarga al equipo de prescripción y le avisaremos cuando esté lista."
+  },
+  {
+    "id": "M021",
+    "patient_id": "P008",
+    "intents": [
+      "refill"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "route_to_provider"
+    ],
+    "routed_to": [
+      "provider_refills"
+    ],
+    "tool_calls": [
+      "tool_check_refill",
+      "tool_verify_patient",
+      "tool_route_to_queue"
+    ],
+    "reply_draft": "Hi George, we’ve forwarded your Amlodipine refill request to Dr. Patel for review. The provider will contact you soon regarding the next steps."
+  },
+  {
+    "id": "M022",
+    "patient_id": "P011",
+    "intents": [
+      "cancel"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "answer_directly"
+    ],
+    "routed_to": [],
+    "tool_calls": [
+      "tool_verify_patient",
+      "tool_get_patient_appointments"
+    ],
+    "reply_draft": "Hi Hannah, I see you have two appointments scheduled for tomorrow (Nov 10): a follow‑up with Sarah Kim at 11:00 AM and a telehealth visit with Dr. Okafor at 3:00 PM. Please let me know which one you’d like to cancel, or if you’d like to cancel both."
+  },
+  {
+    "id": "M023",
+    "patient_id": "P019",
+    "intents": [
+      "admin"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "answer_directly"
+    ],
+    "routed_to": [],
+    "tool_calls": [
+      "tool_verify_patient"
+    ],
+    "reply_draft": "Hi Olivia, the clinic is closed on Friday, November 27, as it is a holiday. Our regular hours are Monday‑Friday 9 am‑5 pm (closed on holidays). Let us know if you’d like to schedule an appointment for another day."
+  },
+  {
+    "id": "M024",
+    "patient_id": "P023",
+    "intents": [
+      "schedule"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "book_appointment"
+    ],
+    "routed_to": [],
+    "tool_calls": [
+      "tool_find_slots",
+      "tool_verify_patient",
+      "tool_book_appointment"
+    ],
+    "reply_draft": "Hi Lucy, your annual physical with Sarah Kim is scheduled for Monday, November 9 at 9:00 AM. We look forward to seeing you then!"
+  },
+  {
+    "id": "M025",
+    "patient_id": "P024",
+    "intents": [
+      "billing",
+      "refill"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "prepare_refill_for_approval"
+    ],
+    "routed_to": [],
+    "tool_calls": [
+      "tool_check_refill",
+      "tool_verify_patient"
+    ],
+    "reply_draft": "Hi Brian,\n\nYour refill request for atorvastatin has been submitted for approval. You should hear back from us shortly.\n\nThe copay for a telehealth visit at Maplewood Family Clinic is $20.\n\nIf you have any other questions, feel free to let us know.\n\nBest regards,\nMaplewood Family Clinic Front Desk"
+  },
+  {
+    "id": "M026",
+    "patient_id": "P016",
+    "intents": [
+      "refill"
+    ],
+    "urgency": "urgent",
+    "actions": [
+      "offer_appointment",
+      "refill_needs_visit",
+      "route_to_provider"
+    ],
+    "routed_to": [
+      "provider_refills"
+    ],
+    "tool_calls": [
+      "tool_find_slots",
+      "tool_check_refill",
+      "tool_verify_patient"
+    ],
+    "reply_draft": "Hi Jonathan, thanks for reaching out. Because you haven’t been seen in over a year, we need to schedule a visit before we can refill your escitalopram. I’ve checked Sarah Kim’s schedule and we have openings on Monday, 2026-11-09 at 10:00, 10:20, 10:40, or Tuesday, 2026-11-10 at 09:00, 09:20, 09:40. Please let me know which time works best for you, and we’ll book the appointment right away."
+  },
+  {
+    "id": "M027",
+    "patient_id": "P013",
+    "intents": [
+      "third_party"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "decline_disclosure"
+    ],
+    "routed_to": [],
+    "tool_calls": [
+      "tool_verify_patient"
+    ],
+    "reply_draft": "For your privacy, we cannot disclose health information or appointment details. Please verify your identity by calling the clinic or using the patient portal."
+  },
+  {
+    "id": "M028",
+    "patient_id": null,
+    "intents": [
+      "other"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "route_to_front_desk"
+    ],
+    "routed_to": [
+      "front_desk"
+    ],
+    "tool_calls": [
+      "tool_find_slots",
+      "tool_verify_patient"
+    ],
+    "reply_draft": "We received your message and our front desk will review it shortly."
+  },
+  {
+    "id": "M029",
+    "patient_id": "P002",
+    "intents": [
+      "schedule"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "book_appointment"
+    ],
+    "routed_to": [],
+    "tool_calls": [
+      "tool_find_slots",
+      "tool_verify_patient",
+      "tool_book_appointment"
+    ],
+    "reply_draft": "Hi Robert, your appointment with Dr. Okafor has been scheduled for Thursday, November 12 at 2:00 PM. We look forward to seeing you then!"
+  },
+  {
+    "id": "M030",
+    "patient_id": "P019",
+    "intents": [
+      "clinical"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "answer_directly"
+    ],
+    "routed_to": [],
+    "tool_calls": [
+      "tool_verify_patient"
+    ],
+    "reply_draft": "A high TSH (thyroid‑stimulating hormone) level usually suggests that your thyroid gland is not producing enough thyroid hormone, a condition known as hypothyroidism. Your pituitary gland releases more TSH to try to stimulate the thyroid to work harder. The exact meaning of the result depends on the specific value, any other lab results, and your overall health. Please discuss these results with your primary provider, Sarah Kim, who can review your full picture and determine if any treatment or additional testing is needed."
+  },
+  {
+    "id": "M031",
+    "patient_id": "P007",
+    "intents": [
+      "other"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "acknowledge"
+    ],
+    "routed_to": [],
+    "tool_calls": [
+      "tool_verify_patient"
+    ],
+    "reply_draft": "You're welcome, Priya! We're glad we could help. Let us know if you need anything else."
+  },
+  {
+    "id": "M032",
+    "patient_id": "P010",
+    "intents": [
+      "clinical"
+    ],
+    "urgency": "emergency",
+    "actions": [
+      "escalate_emergency"
+    ],
+    "routed_to": [
+      "clinician_urgent"
+    ],
+    "tool_calls": [
+      "tool_verify_patient"
+    ],
+    "reply_draft": "This sounds like a medical emergency. Please call 911 or go to the nearest emergency department immediately. We have alerted our clinical team."
+  },
+  {
+    "id": "M033",
+    "patient_id": "P012",
+    "intents": [
+      "admin"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "route_to_front_desk"
+    ],
+    "routed_to": [
+      "front_desk"
+    ],
+    "tool_calls": [
+      "tool_verify_patient"
+    ],
+    "reply_draft": "Thank you, William. I’ve forwarded your request to update your phone number to 555-0199 to our front‑desk team. They will take care of it and you’ll receive a confirmation shortly."
+  },
+  {
+    "id": "M034",
+    "patient_id": null,
+    "intents": [
+      "other"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "route_to_front_desk"
+    ],
+    "routed_to": [
+      "front_desk"
+    ],
+    "tool_calls": [
+      "tool_find_slots",
+      "tool_reschedule_appointment",
+      "tool_verify_patient",
+      "tool_get_patient_appointments"
+    ],
+    "reply_draft": "We received your message and our front desk will review it shortly."
+  },
+  {
+    "id": "M035",
+    "patient_id": "P022",
+    "intents": [
+      "clinical"
+    ],
+    "urgency": "emergency",
+    "actions": [
+      "escalate_emergency"
+    ],
+    "routed_to": [
+      "clinician_urgent"
+    ],
+    "tool_calls": [
+      "tool_verify_patient"
+    ],
+    "reply_draft": "This sounds like a medical emergency. Please call 911 or go to the nearest emergency department immediately. We have alerted our clinical team."
+  },
+  {
+    "id": "M036",
+    "patient_id": "P017",
+    "intents": [
+      "refill"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "refill_too_early"
+    ],
+    "routed_to": [],
+    "tool_calls": [
+      "tool_check_refill",
+      "tool_verify_patient"
+    ],
+    "reply_draft": "We’ve checked the refill for your mom’s donepezil. It’s too early for a refill; the next eligible date is November 21, 2026. We can place the refill request then or schedule a visit if needed. Please let us know how you’d like to proceed."
+  },
+  {
+    "id": "M037",
+    "patient_id": "P023",
+    "intents": [
+      "admin"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "answer_directly"
+    ],
+    "routed_to": [],
+    "tool_calls": [
+      "tool_verify_patient"
+    ],
+    "reply_draft": "Hello Lucy,\n\nOur clinic hours are Monday through Friday, 9:00 AM to 5:00 PM, with a lunch break from 12:00 PM to 1:00 PM. We are closed on holidays, including November 26‑27 and December 25.\n\nIf you need to schedule an appointment or have any other questions, just let us know!\n\nBest regards,\nMaplewood Family Clinic"
+  },
+  {
+    "id": "M038",
+    "patient_id": null,
+    "intents": [
+      "spam"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "no_action"
+    ],
+    "routed_to": [],
+    "tool_calls": [
+      "tool_verify_patient"
+    ],
+    "reply_draft": "We do not accept unsolicited marketing offers. Please remove us from your mailing list."
+  },
+  {
+    "id": "M039",
+    "patient_id": "P014",
+    "intents": [
+      "clinical"
+    ],
+    "urgency": "urgent",
+    "actions": [
+      "book_appointment"
+    ],
+    "routed_to": [],
+    "tool_calls": [
+      "tool_find_slots",
+      "tool_verify_patient",
+      "tool_book_appointment"
+    ],
+    "reply_draft": "Hi Kevin, we’ve scheduled a sick‑visit appointment for you with Dr. James Okafor today at 11:00 AM. Please come to the clinic at that time. If your symptoms worsen or you develop a fever, call 911 or go to the nearest emergency department. Let us know if you need to change this time."
+  },
+  {
+    "id": "M040",
+    "patient_id": "P009",
+    "intents": [
+      "records"
+    ],
+    "urgency": "routine",
+    "actions": [
+      "answer_directly"
+    ],
+    "routed_to": [],
+    "tool_calls": [
+      "tool_verify_patient"
+    ],
+    "reply_draft": "Your request for Sofia's vaccination record has been received. We will securely send the copy to the school as soon as possible. If you have a specific email address or fax number for the school, please let us know."
+  }
+]
